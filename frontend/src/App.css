@@ -1,0 +1,189 @@
+/* ─── Reset & base ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f0f4ff;
+  color: #1e1e2e;
+  min-height: 100vh;
+}
+
+/* ─── Layout ────────────────────────────────────────────── */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.app-header {
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #3b5bdb;
+  letter-spacing: -0.5px;
+}
+
+.app-subtitle {
+  margin-top: 0.4rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ─── Main ───────────────────────────────────────────────── */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+/* ─── Input section ──────────────────────────────────────── */
+.input-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(59, 91, 219, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #3b5bdb;
+}
+
+.field input,
+.field select {
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid #d0d7ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e1e2e;
+  background: #f8f9ff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #3b5bdb;
+  background: #fff;
+}
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: #3b5bdb;
+  color: #fff;
+}
+
+.btn-primary:not(:disabled):hover {
+  background: #2f4ac5;
+}
+
+.btn-secondary {
+  background: #e8ecff;
+  color: #3b5bdb;
+  margin-top: 0.75rem;
+}
+
+.btn-secondary:not(:disabled):hover {
+  background: #d0d7ff;
+}
+
+/* ─── Output section ─────────────────────────────────────── */
+.output-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(59, 91, 219, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.output-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b5bdb;
+  margin-bottom: 0.9rem;
+}
+
+.output-box {
+  background: #f8f9ff;
+  border-left: 4px solid #3b5bdb;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  line-height: 1.7;
+  color: #2c2c3e;
+}
+
+.output-box p {
+  margin-bottom: 0.5rem;
+}
+
+.output-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Error ──────────────────────────────────────────────── */
+.error-msg {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+.app-footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.8rem;
+  color: #999;
+}
